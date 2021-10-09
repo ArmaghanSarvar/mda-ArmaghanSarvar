@@ -1,9 +1,8 @@
 ---
 title: "Mini Data-Analysis Milestone 1"
 author: "Armaghan Sarvar"
-output: 
-  html_document:
-    keep_md: true
+output: html_document
+
 ---
 
 ```{r setup, include=FALSE}
