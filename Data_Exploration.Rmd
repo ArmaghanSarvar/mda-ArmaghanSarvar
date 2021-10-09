@@ -248,7 +248,7 @@ nrow(steam_games %>%
 
 My final choice in dataset selection would be `cancer_sample`.
 A possible research question I'm interested in answering is: 
-** How can we diagnose cancer having different quantitative variables and characteristics of the tomour masses? **
+** How can we diagnose cancer having different quantitative variables and characteristics of images from breast tumors? **
 
 
 
@@ -256,21 +256,80 @@ A possible research question I'm interested in answering is:
 
 ## 2.1 
 In this section, 4 exercises will be conducted to help me dive deeper into the data. These exercises are listed below:
-1. Plotting the hostogram of the numeric variable "perimeter_mean":
 
+1. Plotting the histogram of the numeric variable "perimeter_mean":
 
 ```{r}
 cancer_sample %>%
   ggplot(aes(x=perimeter_mean)) + 
-  geom_histogram(aes(y=..density..), bins=20, colour="blue", fill="cyan") +
-  geom_density(fill="grey", alpha=0.5)
+  geom_histogram(aes(y=..density..), bins=20, colour="blue", fill="cyan") + geom_density(fill="grey", alpha=0.6)
 ```
 As we can in the above plot, the frequencies of the "perimeter_mean" column values form a left-skewed curve. 
 
 ```{r}
 ggplot(cancer_sample) +
-    geom_jitter(aes(x = perimeter_mean, y = diagnosis), colour="blue", alpha = 0.1)
+    geom_jitter(aes(x = perimeter_mean, y = diagnosis), colour="blue", alpha = 0.6)
 ```
-As shown in the above plot, we can have a separation of Benign and Malignant diagnosis values based on the values of the "perimeter_mean" feature.
+As shown in the above plot, we can have a general separation of Benign and Malignant diagnosis values based on the values of the "perimeter_mean" feature. As perimeter_mean increases, more samples are Malignant.
 
+2. Investigating how many missing values there are per variable. (And finding a way to plot this!)
+
+```{r}
+cancer_sample %>%
+  select(everything()) %>%  
+  summarise_all(funs(sum(is.na(.))))
+```
+
+As it can be seen, there are no missing values in this dataset at all.
+Plotting the above calculation:
+ 
+```{r}
+my_res <- (cancer_sample %>% 
+  summarise_all(funs(sum(is.na(.))))) 
+ 
+null_counts <- c(my_res) 
+ 
+plot(1:length(null_counts), null_counts, xaxt = "n", xlab='Variables', ylab='Missing Values', type = 'p') 
+axis(1, at=1:length(null_counts), labels=names(cancer_sample))
+```
+
+
+3. Exploring the relationship between 2 variables in a plot. 
+
+```{r}
+cancer_sample %>% 
+  ggplot(aes(symmetry_mean, concavity_mean, color = diagnosis)) +
+  geom_point(alpha = 0.6)
+```
+In the above scatter plot, the relationship between symmetry and concavity of the cell nuclei is represented. the samples are differentiated based on Malignant vs. Benign diagnosis values.
+
+4. Using a boxplot to look at the frequency of different observations within two variables. 
+
+```{r}
+ggplot(cancer_sample, aes(x = diagnosis, y = perimeter_mean)) +
+  geom_boxplot()
+ggplot(cancer_sample, aes(x = diagnosis, y = symmetry_mean)) +
+  geom_boxplot()
+```
+As shown in the above box plot, we can see the distribution of each of the "perimeter_mean" and "symmetry_mean" features based on the observation of samples being Malignant or Benign. This helps us compare how the different feature values and their data percentiles and averages are regarding the diagnosis. 
+
+
+## 2.2 Explanation of the chosen exercises
+
+* Exercise 1: 
+1. It makes sense to look at the distribution of any of the columns provided in the dataset. This is because we want to see the shape of the distribution, especially when determining whether the output of a process is distributed approximately normally.
+2. Each numeric variable has an effect on the `diagnosis` outcome, and we can compare the scatter plot of the feature values across the values of the diagnosis column.
+
+* Exercise 2: It is important to check for missing values in a dataset, since the existence of these values can effect both statistical analysis and future model building on the data. I was able to make sure that fortunately, there was no unrecorded value in the `cancer_sample` dataset. 
+
+* Exercise 3: I decided to do this exercise because I believe exploring the relationship between 2 variables helps us measure the strength of the positive/negative relationship between two features and compute their association. A high correlation points to a strong relationship between the two variables, while a low correlation means that the variables are weakly related. In the extracted plot we gained an idea of this relationship regarding the diagnosis binary values.
+
+* Exercise 4: I decided to look at the frequencies of variables by using a boxplot because I believe a box plot is easy to read, it can summarize data regarding different observations and display the results in a single graph. Since the boxplot is a standardized way of displaying the distribution of data based on minimum, first quartile, median, third quartile, and maximum, it tells us about the outliers and also allows for comparison of data for more effective decision-making. 
+
+
+# Task 3: Research Questions
+1. Can we predict a diagnosis as malignant or benign based on the provided features from nuclei images?
+2. How is the distribution of each feature value considering the samples being malignant or benign?
+3. What are the statistical measurements of two features when compared to each other among malignant and benign diagnoses? For example, what are the values of the mean, median and standard deviation of concavity_mean vs. symmetry_mean among malignant diagnoses?
+4. Which features have a more signifact effect on the samples being classified as malignant or benign? In other words, which columns can we omit and still have a deterministic diagnosis prediction on input samples and which columns play an important role in separating the data values?
 
