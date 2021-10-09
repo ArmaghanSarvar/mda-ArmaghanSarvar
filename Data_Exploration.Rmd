@@ -15,6 +15,7 @@ library(datateachr)  # provides 7 semi-tidy datasets
 library(tidyverse)  # provides data analysis libraries
 ```
 
+# Task 1: Choosing the favorite dataset
 
 ## 1.1 Choosing four datasets from the `datateachr` package
 
@@ -26,7 +27,8 @@ Here, the four datasets that I have chosen for analysi are listed and briefly de
 4. `apt_buildings`: Acquired courtesy of The City of Toronto’s Open Data Portal. It is reported to have 3455 rows and 37 columns.
 
 
-## 1.2 In the following parts, the four chosen datasets will be explored. 
+## 1.2 Dataset Exploration
+In the following parts, the four chosen datasets will be explored. 
 More specifically, the `dplyr` package will be used to help us find out at least 3 attributes about each dataset. 
 
 ### Dataset 1
@@ -59,7 +61,7 @@ summary(cancer_sample)
 ```
 
 
-* See the unique values in the "diagnosis" column
+* Seeing the unique values in the "diagnosis" column
 ```{r}
 unique(cancer_sample$diagnosis)
 ```
@@ -105,7 +107,7 @@ summary(steam_games)
 ```
 
 
-* See the unique values in the "types" column
+* Seeing the unique values in the "types" column
 ```{r}
 unique(steam_games$types)
 ```
@@ -152,7 +154,7 @@ summary(vancouver_trees)
 ```
 
 
-* See the unique values in the "street_side_name" column
+* Seeing the unique values in the "street_side_name" column
 ```{r}
 unique(vancouver_trees$street_side_name)
 ```
@@ -198,7 +200,7 @@ summary(apt_buildings)
 ```
 
 
-* See the unique values in the "heating_type" column
+* Seeing the unique values in the "heating_type" column
 ```{r}
 unique(apt_buildings$heating_type)
 ```
@@ -213,7 +215,7 @@ apt_buildings %>%
 
 
 ## 1.3 Narrowing down top 2 datasets
-Based on the exploration done in the previous part (section 1.2), I found `cancer_sample` and `steam_games` most fascinating ones.
+Based on the exploration done in the previous part (section 1.2), I find `cancer_sample` and `steam_games` most fascinating ones.
 
 * `cancer_samples`: 
 1. First of all, I find the application and usage of this dataset in healthcare highly interesting and important. 
@@ -248,7 +250,8 @@ nrow(steam_games %>%
 
 My final choice in dataset selection would be `cancer_sample`.
 A possible research question I'm interested in answering is: 
-** How can we diagnose cancer having different quantitative variables and characteristics of images from breast tumors? **
+
+*How can we diagnose cancer having different quantitative variables and characteristics of images from breast tumors?*
 
 
 
@@ -320,7 +323,7 @@ As shown in the above box plot, we can see the distribution of each of the "peri
 1. It makes sense to look at the distribution of any of the columns provided in the dataset. This is because we want to see the shape of the distribution, especially when determining whether the output of a process is distributed approximately normally.
 2. Each numeric variable has an effect on the `diagnosis` outcome, and we can compare the scatter plot of the feature values across the values of the diagnosis column.
 
-* Exercise 2: It is important to check for missing values in a dataset, since the existence of these values can effect both statistical analysis and future model building on the data. I was able to make sure that fortunately, there was no unrecorded value in the `cancer_sample` dataset. 
+* Exercise 2: It is important to check for missing values in a dataset, since the existence of these values can negatively effect both statistical analysis and future model building on the data. I was able to make sure that fortunately, there was no unrecorded value in the `cancer_sample` dataset. 
 
 * Exercise 3: I decided to do this exercise because I believe exploring the relationship between 2 variables helps us measure the strength of the positive/negative relationship between two features and compute their association. A high correlation points to a strong relationship between the two variables, while a low correlation means that the variables are weakly related. In the extracted plot we gained an idea of this relationship regarding the diagnosis binary values.
 
@@ -331,5 +334,5 @@ As shown in the above box plot, we can see the distribution of each of the "peri
 1. Can we predict a diagnosis as malignant or benign based on the provided features from nuclei images?
 2. How is the distribution of each feature value considering the samples being malignant or benign?
 3. What are the statistical measurements of two features when compared to each other among malignant and benign diagnoses? For example, what are the values of the mean, median and standard deviation of concavity_mean vs. symmetry_mean among malignant diagnoses?
-4. Which features have a more signifact effect on the samples being classified as malignant or benign? In other words, which columns can we omit and still have a deterministic diagnosis prediction on input samples and which columns play an important role in separating the data values?
+4. Which features have a more significant effect on the samples being classified as malignant or benign? In other words, which columns can we omit and still have a deterministic diagnosis prediction on input samples and which columns play an important role in separating the data values?
 
