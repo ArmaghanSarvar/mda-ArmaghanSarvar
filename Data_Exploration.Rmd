@@ -2,6 +2,7 @@
 title: "Mini Data-Analysis Milestone 1"
 author: "Armaghan Sarvar"
 output: html_document
+keep_md: true
 ---
 
 ```{r setup, include=FALSE}
@@ -19,7 +20,7 @@ library(tidyverse)  # provides data analysis libraries
 
 ## 1.1 Choosing four datasets from the `datateachr` package
 
-Here, the four datasets that I have chosen for analysi are listed and briefly described.
+Here, the four datasets that I have chosen for analysis are listed and briefly described.
 
 1. `cancer_sample`: Acquired courtesy of UCI Machine Learning Repository. It is reported to have 569 rows and 32 columns.
 2. `steam_games`: Acquired courtesy of Kaggle. It is reported to have 40833 rows and 21 columns.
