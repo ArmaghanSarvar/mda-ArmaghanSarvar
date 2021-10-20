@@ -1,4 +1,4 @@
-This repository is made for my Mini Data Analysis project for STAT 545A course 💻
+This repository is made for my Mini Data Analysis project for UBC STAT 545A course 💻
 
 ### The files in this project:
 
