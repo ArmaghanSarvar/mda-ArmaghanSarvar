@@ -9,3 +9,4 @@ This repository is made for my Mini Data Analysis project for STAT 545A course ð
 
 https://htmlpreview.github.io/?https://github.com/stat545ubc-2021/mda-ArmaghanSarvar/blob/main/Data_Exploration.html
 
+* *Data_Exploration.md* contains the knitted .md file for milestone 1 of this data analysis project.
