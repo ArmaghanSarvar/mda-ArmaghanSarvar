@@ -14,7 +14,7 @@ https://htmlpreview.github.io/?https://github.com/ArmaghanSarvar/mda-ArmaghanSar
 
 ## Milestone 2 Folder
 * *Data_Analysis.Rmd* contains the R markdown file for milestone 2 of this data analysis project (can be run in RStudio.)
-* *Data_Analysis.html* contains the R markdown file for milestone 2 of this data analysis project (can be run in RStudio.)
+* *Data_Analysis.html* contains the knitted html file for milestone 2 of this data analysis project.
 
 * **The html file for Milestone2 can be more easily previewd using the following link:**
 
@@ -25,7 +25,7 @@ https://htmlpreview.github.io/?https://github.com/ArmaghanSarvar/mda-ArmaghanSar
 
 ## Milestone 3 Folder
 * *Data_Analysis_2.Rmd* contains the R markdown file for milestone 3 of this data analysis project (can be run in RStudio.)
-* *Data_Analysis_2.html* contains the R markdown file for milestone 3 of this data analysis project (can be run in RStudio.)
+* *Data_Analysis_2.html* contains the knitted html file  for milestone 3 of this data analysis project.
 
 * **The html file for Milestone3 can be more easily previewd using the following link:**
 
