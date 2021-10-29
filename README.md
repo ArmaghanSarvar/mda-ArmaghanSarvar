@@ -39,8 +39,8 @@ https://htmlpreview.github.io/?https://github.com/ArmaghanSarvar/mda-ArmaghanSar
 
 ## Output
 This is the folder were some documents created from the Milestone 3 are stored:
-* *summ_table.csv* 
-* *fitted_model.rds* 
+* *summ_table.csv* contains a summary table obtained as a part of Milestone 2
+* *fitted_model.rds* contains the fitted model on features to predict the target variable
 
 
 ## Running the Code
