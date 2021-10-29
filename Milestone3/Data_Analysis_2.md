@@ -48,7 +48,7 @@ previous milestone. The plot you choose should involve plotting across
 at least three groups (whether by facetting, or using an aesthetic like
 colour). Place this plot below (you’re allowed to modify the plot if
 you’d like). If you don’t have such a plot, you’ll need to make one.
-Place the code for your plot below.
+Place the code for the plot below.
 
 ``` r
 cancer_sample
@@ -135,7 +135,7 @@ final_plot
 
 Now, let’s choose two of the following tasks.
 
-1.  Produce a new plot that reorders a factor in your original plot,
+1.  Produce a new plot that reorders a factor in the original plot,
     using the `forcats` package (3 points). Then, in a sentence or two,
     briefly explain why you chose this ordering (1 point here for
     demonstrating understanding of the reordering, and 1 point for
@@ -149,21 +149,21 @@ Now, let’s choose two of the following tasks.
     the grouping, and 1 point for demonstrating some justification for
     the grouping, which could be subtle or speculative.)
 
-3.  If your data has some sort of time-based column like a date (but
+3.  If the data has some sort of time-based column like a date (but
     something more granular than just a year):
 
     1.  Make a new column that uses a function from the `lubridate` or
-        `tsibble` package to modify your original time-based column. (3
+        `tsibble` package to modify the original time-based column. (3
         points)
         -   Note that you might first have to *make* a time-based column
             using a function like `ymd()`, but this doesn’t count.
         -   Examples of something you might do here: extract the day of
             the year from a date, or extract the weekday, or let 24
-            hours elapse on your dates.
-    2.  Then, in a sentence or two, explain how your new column might be
+            hours elapse on the dates.
+    2.  Then, in a sentence or two, explain how the new column might be
         useful in exploring a research question. (1 point for
         demonstrating understanding of the function you used, and 1
-        point for your justification, which could be subtle or
+        point for the justification, which could be subtle or
         speculative).
         -   For example, you could say something like “Investigating the
             day of the week might be insightful because penguins don’t
@@ -235,7 +235,7 @@ based on the provided features from nuclei images?
 Fit a model or run a hypothesis test that provides insight on this
 variable with respect to the research question. Store the model object
 as a variable, and print its output to screen. We’ll omit having to
-justify your choice, because we don’t expect you to know about model
+justify the choice, because we don’t expect you to know about model
 specifics in STAT 545.
 
 -   **Note**: It’s OK if you don’t know how these models/tests work.
@@ -246,7 +246,7 @@ specifics in STAT 545.
     -   You could test whether the mean of Y equals 0 using `t.test()`,
         or maybe the mean across two groups are different using
         `t.test()`, or maybe the mean across multiple groups are
-        different using `anova()` (you may have to pivot your data for
+        different using `anova()` (you may have to pivot the data for
         the latter two).
     -   You could use `lm()` to test for significance of regression.
 
@@ -430,16 +430,16 @@ fitted_model2
 
 ## 2.2
 
-Produce something relevant from your fitted model: either predictions on
+Produce something relevant from my fitted model: either predictions on
 Y, or a single value like a regression coefficient or a p-value.
 
 -   Be sure to indicate in writing what you chose to produce.
--   Your code should either output a tibble (in which case you should
+-   Our code should either output a tibble (in which case you should
     indicate the column that contains the thing you’re looking for), or
     the thing you’re looking for itself.
--   Obtain your results using the `broom` package if possible. If your
+-   Obtain our results using the `broom` package if possible. If the
     model is not compatible with the broom function you’re needing, then
-    you can obtain your results by some other means, but first indicate
+    you can obtain the results by some other means, but first indicate
     which broom function is not compatible.
 
 Using the `glance` function from the broom package for better
@@ -576,19 +576,19 @@ per-test information for multtest functions. As seen, the output of the
 # Exercise 3: Reading and writing data
 
 Get set up for this exercise by making a folder called `output` in the
-top level of your project folder / repository. You’ll be saving things
+top level of the project folder / repository. You’ll be saving things
 there.
 
 ## 3.1 (5 points)
 
 Take a summary table that you made from Milestone 2 (Exercise 1.2), and
-write it as a csv file in your `output` folder. Use the `here::here()`
+write it as a csv file in the `output` folder. Use the `here::here()`
 function.
 
--   **Robustness criteria**: You should be able to move your Mini
-    Project repository / project folder to some other location on your
-    computer, or move this very Rmd file to another location within your
-    project repository / folder, and your code should still work.
+-   **Robustness criteria**: We should be able to move the Mini Project
+    repository / project folder to some other location on the computer,
+    or move this very Rmd file to another location within the project
+    repository / folder, and the code should still work.
 -   **Reproducibility criteria**: You should be able to delete the csv
     file, and remake it simply by knitting this Rmd file.
 
@@ -625,9 +625,9 @@ write_csv(summ_table, here::here("output", "summ_table.csv"))
 
 ## 3.2 (5 points)
 
-Write your model object from Exercise 2 to an R binary file (an RDS),
-and load it again. Be sure to save the binary file in your `output`
-folder. Use the functions `saveRDS()` and `readRDS()`.
+Write the model object from Exercise 2 to an R binary file (an RDS), and
+load it again. Be sure to save the binary file in the `output` folder.
+Use the functions `saveRDS()` and `readRDS()`.
 
 -   The same robustness and reproducibility criteria as in 3.1 apply
     here.
@@ -688,24 +688,24 @@ model_reloaded %>%
 
 # Tidy Repository
 
-Now that this is your last milestone, your entire project repository
+Now that this is the last milestone, our entire project repository
 should be organized. Here are the criteria we’re looking for.
 
 ## Main README (3 points)
 
-There should be a file named `README.md` at the top level of your
+There should be a file named `README.md` at the top level of the
 repository. Its contents should automatically appear when you visit the
 repository on GitHub.
 
 Minimum contents of the README file:
 
 -   In a sentence or two, explains what this repository is, so that
-    future-you or someone else stumbling on your repository can be
+    future-you or someone else stumbling on the repository can be
     oriented to the repository.
 -   In a sentence or two (or more??), briefly explains how to engage
     with the repository. You can assume the person reading knows the
-    material from STAT 545A. Basically, if a visitor to your repository
-    wants to explore your project, what should they know?
+    material from STAT 545A. Basically, if a visitor to the repository
+    wants to explore the project, what should they know?
 
 Once you get in the habit of making README files, and seeing more README
 files in other projects, you’ll wonder how you ever got by without them!
@@ -713,7 +713,7 @@ They are tremendously helpful.
 
 ## File and Folder structure (3 points)
 
-You should have at least four folders in the top level of your
+You should have at least four folders in the top level of the
 repository: one for each milestone, and one output folder. If there are
 any other folders, these are explained in the main README.
 
