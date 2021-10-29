@@ -15,7 +15,7 @@ https://htmlpreview.github.io/?https://github.com/ArmaghanSarvar/mda-ArmaghanSar
 * *Data_Exploration.md* contains the knitted .md file for milestone 1 of this data analysis project.
 
 ## Milestone 2 Folder
-In this milestone, summarization and plots of the variables in the chosen dataset are investigated to answer the questions formulated in the previous phase. Next, the research questions are narrowed to two. Finally, a tidy version of the dataset is produced.
+In this milestone, summarization and plots of the variables in the chosen dataset are investigated to answer the questions formulated in the previous phase. Next, the research questions are narrowed down to two. Finally, a more standard version of the dataset is produced.
 * *Data_Analysis.Rmd* contains the R markdown file for milestone 2 of this data analysis project (can be run in RStudio.)
 * *Data_Analysis.html* contains the knitted html file for milestone 2 of this data analysis project.
 
@@ -39,11 +39,11 @@ https://htmlpreview.github.io/?https://github.com/ArmaghanSarvar/mda-ArmaghanSar
 
 ## Output
 This is the folder were some documents created from the Milestone 3 are stored:
-* *summ_table.csv* 
-* *fitted_model.rds* 
+* *summ_table.csv* contains a summary table obtained as a part of Milestone 2
+* *fitted_model.rds* contains the fitted model on features to predict the target variable
 
 
-## Running the Code
+## If you want to extend/ improve the code
 * Make a new branch
 * Pull the repository (you need to install R studio)
 * Change any file
