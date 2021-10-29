@@ -15,7 +15,7 @@ https://htmlpreview.github.io/?https://github.com/ArmaghanSarvar/mda-ArmaghanSar
 * *Data_Exploration.md* contains the knitted .md file for milestone 1 of this data analysis project.
 
 ## Milestone 2 Folder
-In this milestone, summarization and plots of the variables in the chosen dataset are investigated to answer the questions formulated in the previous phase. Next, the research questions are narrowed to two. Finally, a tidy version of the dataset is produced.
+In this milestone, summarization and plots of the variables in the chosen dataset are investigated to answer the questions formulated in the previous phase. Next, the research questions are narrowed down to two. Finally, a more standard version of the dataset is produced.
 * *Data_Analysis.Rmd* contains the R markdown file for milestone 2 of this data analysis project (can be run in RStudio.)
 * *Data_Analysis.html* contains the knitted html file for milestone 2 of this data analysis project.
 
