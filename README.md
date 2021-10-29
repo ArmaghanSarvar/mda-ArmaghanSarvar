@@ -43,7 +43,7 @@ This is the folder were some documents created from the Milestone 3 are stored:
 * *fitted_model.rds* contains the fitted model on features to predict the target variable
 
 
-## If you want to extend/improve the code
+## If you want to extend/ improve the code
 * Make a new branch
 * Pull the repository (you need to install R studio)
 * Change any file
