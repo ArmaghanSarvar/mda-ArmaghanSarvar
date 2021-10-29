@@ -32,3 +32,11 @@ https://htmlpreview.github.io/?https://github.com/ArmaghanSarvar/mda-ArmaghanSar
 https://htmlpreview.github.io/?https://github.com/ArmaghanSarvar/mda-ArmaghanSarvar/blob/main/Milestone3/Data_Analysis_2.html
 
 * *Data_Analysis_2.md* contains the knitted .md file for milestone 3 of this data analysis project.
+
+
+## Running the Code
+* Make a new branch
+* Pull the repository (you need to install R studio)
+* Change any file
+* Commit, and push the editted repository to GitHub
+* Create a pull request 
