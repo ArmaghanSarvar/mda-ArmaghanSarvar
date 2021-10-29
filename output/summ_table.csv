@@ -1,0 +1,3 @@
+diagnosis,range(concavity_mean)[1],range(concavity_mean)[2],mean(concavity_mean),median(concavity_mean),sd(concavity_mean)
+B,0,0.4108,0.04605762100840336,0.03709,0.043442151045061585
+M,0.02398,0.4268,0.16077471698113208,0.15134999999999998,0.07501932785025706
