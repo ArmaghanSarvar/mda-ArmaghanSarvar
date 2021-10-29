@@ -33,6 +33,11 @@ https://htmlpreview.github.io/?https://github.com/ArmaghanSarvar/mda-ArmaghanSar
 
 * *Data_Analysis_2.md* contains the knitted .md file for milestone 3 of this data analysis project.
 
+## Output
+This is the folder were some documents created from the Milestone 3 are stored:
+* *summ_table.csv* 
+* *fitted_model.rds* 
+
 
 ## Running the Code
 * Make a new branch
