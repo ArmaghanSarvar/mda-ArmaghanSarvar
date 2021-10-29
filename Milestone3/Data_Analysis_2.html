@@ -556,7 +556,7 @@ fitted_model2</code></pre>
 ##  9 concave_points_mean  0.431       0.398    1.08   0.280        
 ## 10 symmetry_mean        0.0203      0.147    0.138  0.890        
 ## # … with 21 more rows</code></pre>
-<p>With the above code, we can have coefficients and p-values for each term in a regression, per-cluster information in clustering applications, or per-test information for multtest functions. As seen, the output of the <code>tidy</code> and <code>augment</code> functions is also a tibble.</p>
+<p>With the above code, we can have coefficients and p-values for each term in a regression, per-cluster information in clustering applications, or per-test information for multtest functions. As seen, the output of the <code>tidy</code> and <code>augment</code> functions is also a tibble. We can notice that there is no major difference between the learned models which use the original and the normalized datasets if we consider the <code>r.squared</code> column extracted with the <code>glance</code> function.</p>
 </div>
 </div>
 <div id="exercise-3-reading-and-writing-data" class="section level1">
