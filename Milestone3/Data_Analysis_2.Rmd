@@ -221,6 +221,8 @@ tidy(fitted_model2)
 
 
 With the above code, we can have coefficients and p-values for each term in a regression, per-cluster information in clustering applications, or per-test information for multtest functions. As seen, the output of the `tidy` and `augment` functions is also a tibble.
+We can notice that there is no major difference between the learned models which use the original and the normalized datasets if we consider the `r.squared` column extracted with the `glance` function. 
+
 
 # Exercise 3: Reading and writing data
 
